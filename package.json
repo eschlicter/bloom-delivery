@@ -1,0 +1,11 @@
+{
+  "name": "bloom",
+  "version": "1.0.0",
+  "description": "An application for customers to buy flowers ",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine"
+  },
+  "author": "",
+  "license": "ISC"
+}
