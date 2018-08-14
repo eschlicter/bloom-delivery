@@ -22,6 +22,7 @@ module.exports = {
             saveUninitialized: false,
             cookie: { maxAge: 1.21e+9 } //set cookie to expire in 14 days
         }));
+        app.use(express.cookieParser('this is a secret'));
         app.use(flash());
         passportConfig.init(app);
 
