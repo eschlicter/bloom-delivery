@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../static/partials/head.ejs %>
+    </head>
+    <body>
+        <main class="container">
+            <% include ../static/partials/navbar.ejs %>
+
+            <h1>Products</h1>
+
+            <ul class="list-group">
+                <% products.forEach((product) => { %>
+                    <li class="list-group-item">
+                        <a href="/products/<%= product.id %>"> <%= product.title %> </a>
+                    </li>
+                    <% }) %>
+            </ul>
+        </main>
+    </body>
+</html>
