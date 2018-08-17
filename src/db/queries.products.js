@@ -1,5 +1,5 @@
 const Product = require("./models").Product;
-
+const Authorizer = require("../policies/product");
 module.exports = {
     getAllProducts(callback){
         return Product.all()
@@ -32,23 +32,34 @@ module.exports = {
             callback(err);
         })
     },
-    deleteProduct(id, callback){
-        return Product.destroy({
-            where: {id}
-        })
+    deleteProduct(req, callback){
+        return Product.findById(req.params.id)
         .then((product) => {
-            callback(null, product);
+            const authorized = new Authorizer(req.user, product).destroy();
+            if(authorized){
+                product.destroy()
+                .then((res) => {
+                    callback(null, product);
+                });
+            } else {
+                req.flash("notice", "You are not authorized to do that.")
+                callback(401);
+            }
         })
         .catch((err) => {
             callback(err);
-        })
+        });
     },
-    updateProduct(id, updatedProduct, callback){
-        return Product.findById(id)
+    updateProduct(req, updatedProduct, callback){
+        return Product.findById(req.params.id)
         .then((product) => {
             if(!product){
                 return callback("Product not found");
             }
+            const authorized = new Authorizer(req.user, product).update();
+            if(authorized){
+
+
             product.update(updatedProduct, {
                 fields: Object.keys(updatedProduct)
             })
@@ -58,6 +69,10 @@ module.exports = {
             .catch((err) => {
                 callback(err);
             });
+        } else {
+            req.flash("notice", "You are not authorized to do that.");
+            callback("Forbidden");
+        }
         });
     }
 }

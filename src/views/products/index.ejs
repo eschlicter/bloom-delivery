@@ -8,6 +8,9 @@
             <% include ../static/partials/navbar.ejs %>
 
             <h1>Products</h1>
+            <% if(currentUser && currentUser.isAdmin()) { %>
+                <a href="/products/new" class="btn btn-success">New Product</a>
+            <% } %>
 
             <ul class="list-group">
                 <% products.forEach((product) => { %>

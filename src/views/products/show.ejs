@@ -8,11 +8,14 @@
 
     <main class="container">
       <h1><%= product.title %></h1>
+      <% if(currentUser) { %>
       <a href="/products/<%= product.id %>/edit" class="btn btn-warning">Edit</a>
-
+      <% if(currentUser) { %>
       <form style="display:initial" action="/products/<%= product.id %>/destroy" method="post">
         <button type="submit" class="btn btn-danger">Delete</button>
       </form>
+      <% } %>
+    <% } %>
 
       <p><%= product.description %></p>
       <p><%= product.price %></p>
