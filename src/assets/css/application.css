@@ -1,12 +1,19 @@
 body {
-    padding-top: 54px;
-  }
+  padding-top: 54px;
+}
 
 .jumbotron-fluid {
-    background: url("../img/caroline-ingebrigtsen-70953-unsplash.jpg") no-repeat center;
-    max-width: 100%;
-    text-align: center;
-    color: white;
-    height: 300px;
-    background-size: cover;
+  background: url("../img/caroline-ingebrigtsen-70953-unsplash.jpg") no-repeat center;
+  max-width: 100%;
+  text-align: center;
+  color: white;
+  height: 300px;
+  background-size: cover;
+  font-family: "Courier New"
+}
+
+.card {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
 }

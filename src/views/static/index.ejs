@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <% include ./partials/head.ejs %>
-  </head>
-  <body>
-    <% include ./partials/navbar.ejs %> 
-    
+ <head>
+   <% include ./partials/head.ejs %>
+ </head>
+ <body>
+   <% include ./partials/navbar.ejs %>
+     <!-- Page Content -->
+     <main class="container">
 
-      <!-- Page Content -->
-      <main class="container">
-
-        <!-- Jumbotron Header -->
-        <header class="jumbotron jumbotron-fluid">
-          <h1 class="display-3">Welcome to Bloom</h1>
-          <!-- <img src="../img/caroline-ingebrigtsen-70953-unsplash.jpg" alt="flowers" height="auto" width="auto">
-          <p class="lead">Sign up & shop!</p> -->
-          <a href="/users/sign_up" class="btn btn-primary btn-lg">Sign up</a>
-        </header>
-
-        <!-- Page Features -->
-        <section class="row text-center">
-
-          <section class="col-lg-4">
-            <h4 class="card-title">Shop</h4>
-            <p class="card-text">Browse floral collections</p>
-          </section>
-
-          <section class="col-lg-4">
-            <h4 class="card-title">Order</h4>
-            <p class="card-text">Order your flowers online</p>
-          </section>
-
-          <section class="col-lg-4">
-            <h4 class="card-title">Subscribe</h4>
-            <p class="card-text">Become a premium shopper and get access to great deals</p>
-          </section>
-
-        </section>
-        <!-- /.row -->
+       <!-- Jumbotron Header -->
+       <header class="jumbotron jumbotron-fluid">
+         <h1 class="display-3">Welcome to Bloom</h1>
         
+       </header>
 
-      </main>
+       <!-- Page Features -->
+       <section class="row text-center">
+          
+
+           <div class="card" style="width: 18rem;">
+               <img class="card-img-top" src="../img/marisa-morton-545159-unsplash.jpg" alt="Card image cap">
+               <div class="card-body">
+                 <h5 class="card-title">Create an Account</h5>
+                 <p class="card-text">Create an account to access our floral catalog</p>
+                 <a href="/users/sign_up" class="btn btn-primary">Sign Up</a>
+               </div>
+             </div>
+             <div class="card" style="width: 18rem;">
+               <img class="card-img-top" src="../img/bonnie-kittle-180056-unsplash.jpg" alt="Card image cap">
+               <div class="card-body">
+                 <h5 class="card-title">Shop & Order</h5>
+                 <p class="card-text">Shop and order your flowers online</p>
+                 <a href="/products" class="btn btn-primary">Shop</a>
+               </div>
+             </div>
+             <div class="card" style="width: 18rem;">
+                 <img class="card-img-top" src="../img/eva-waardenburg-747781-unsplash.jpg" alt="Card image cap">
+                 <div class="card-body">
+                   <h5 class="card-title">Become a Member</h5>
+                   <p class="card-text">Become a premium shopper and get access to great deals</p>
+                   <a href="#" class="btn btn-primary">Subscribe</a>
+                 </div>
+                
+               </div>
+
+       </section>
+       <!-- /.row -->
       
-      <!-- /.container -->
-      
-      <% include ./partials/baseScripts.ejs %>
-    </body>
+
+     </main>
+    
+     <!-- /.container -->
+    
+     <% include ./partials/baseScripts.ejs %>
+   </body>
 </html>
