@@ -32,7 +32,7 @@ module.exports = {
             res.locals.currentUser = req.user;
             next();
         });
-        app.use(multer);
+       
 
     }
 };
