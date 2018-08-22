@@ -44,3 +44,8 @@ body {
 .label{
   font-weight: bold;
 }
+
+.cart{
+  text-align: center;
+  margin-left: 46%;
+}
