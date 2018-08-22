@@ -15,7 +15,7 @@
             <ul class="list-group">
                 <% products.forEach((product) => { %>
                     <li class="list-group-item">
-                        <img class="mr-3" src="../img/marisa-morton-545159-unsplash.jpg" alt="Generic placeholder image">
+                        <img src="../img/<%= product.image %>" class="mr-3">
                         <a href="/products/<%= product.id %>"> <%= product.title %> </a>
                     </li>
                     <% }) %>

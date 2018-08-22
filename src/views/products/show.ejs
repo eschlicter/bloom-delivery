@@ -18,7 +18,7 @@
         <% } %>
     <span class="specific-product">
     <h1><%= product.title %></h1>
-    <img class="mr-4" src="../img/marisa-morton-545159-unsplash.jpg" alt="Generic placeholder image">
+      <img src="../img/<%= product.image %>" class="product-image">
       <p><span class="label">Description:</span> <%= product.description %></p>
       <p><span class="label">Price:</span> $<%= product.price %></p>
     </span>

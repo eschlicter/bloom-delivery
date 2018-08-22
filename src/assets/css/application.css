@@ -49,3 +49,10 @@ body {
   text-align: center;
   margin-left: 46%;
 }
+
+.product-image{
+  max-width: 30%;
+  max-height: 30%;
+  text-align: center;
+  margin-left: 35%;
+}
