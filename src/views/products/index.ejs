@@ -8,17 +8,20 @@
             <% include ../static/partials/navbar.ejs %>
 
             <h1>Products</h1>
-            <% if(currentUser.isAdmin()) { %>
-                <a href="/products/new" class="btn btn-success">New Product</a>
+            <% if(currentUser) { %>
+                <a href="/products/new" class="btn btn-primary">New Product</a>
             <% } %>
-    
+            
             <ul class="list-group">
                 <% products.forEach((product) => { %>
                     <li class="list-group-item">
+                        <img class="mr-3" src="../img/marisa-morton-545159-unsplash.jpg" alt="Generic placeholder image">
                         <a href="/products/<%= product.id %>"> <%= product.title %> </a>
                     </li>
                     <% }) %>
             </ul>
+            
         </main>
     </body>
 </html>
+

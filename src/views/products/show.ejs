@@ -8,19 +8,22 @@
     <% include ../static/partials/navbar.ejs %>
 
     <main class="container">
-      <h1><%= product.title %></h1>
-      <% if(currentUser.isAdmin()) { %>
-      <a href="/products/<%= product.id %>/edit" class="btn btn-warning">Edit</a>
-      <% if(currentUser.isAdmin()) { %>
-      <form style="display:initial" action="/products/<%= product.id %>/destroy" method="post">
-        <button type="submit" class="btn btn-danger">Delete</button>
-      </form>
-      <% } %>
-    <% } %>
-
-      <p><%= product.description %></p>
-      <p><%= product.price %></p>
+        <% if(currentUser) { %>
+          <a href="/products/<%= product.id %>/edit" class="btn btn-primary edit">Edit</a>
+          <% if(currentUser) { %>
+          <form style="display:initial" action="/products/<%= product.id %>/destroy" method="post">
+            <button type="submit" class="btn btn-secondary delete">Delete</button>
+          </form>
+          <% } %>
+        <% } %>
+    <span class="specific-product">
+    <h1><%= product.title %></h1>
+    <img class="mr-4" src="../img/marisa-morton-545159-unsplash.jpg" alt="Generic placeholder image">
+      <p><span class="label">Description:</span> <%= product.description %></p>
+      <p><span class="label">Price:</span> $<%= product.price %></p>
+    </span>
     </main>
+    
 
     <% include ../static/partials/baseScripts.ejs %>
 

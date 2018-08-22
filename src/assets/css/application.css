@@ -17,3 +17,30 @@ body {
   float: none;
   margin-bottom: 10px;
 }
+
+.mr-3{
+  max-width: 25%;
+  max-height: 25%;
+}
+
+.mr-4{
+  max-width: 50%;
+  max-height: 50%;
+  display: block;
+  padding: 25px;
+  margin-left: 25%;
+
+}
+
+.btn{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.specific-product{
+  text-align: center;
+}
+
+.label{
+  font-weight: bold;
+}
