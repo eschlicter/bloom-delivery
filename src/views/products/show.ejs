@@ -22,8 +22,11 @@
       <p><span class="label">Description:</span> <%= product.description %></p>
       <p><span class="label">Price:</span> $<%= product.price %></p>
     </span>
+    
     </main>
-    <button type="submit" class="btn btn-primary cart">Add to Cart</button>
+    <form method="post" action="/cart/<%= product.id %> ">
+      <button type="submit" class="btn btn-primary add2cart" value="Add to Cart">Add to Cart</button>
+    </form>
     <% include ../static/partials/baseScripts.ejs %>
     </div>
   </body>

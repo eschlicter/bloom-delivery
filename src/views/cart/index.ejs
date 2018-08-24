@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <% include ../static/partials/head.ejs %>
+</head>
+<body>
+    <% include ../static/partials/navbar.ejs %>
+   
+<main class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Your Cart</h1>
+            <form style="display:initial" action="/cart/remove" method="post">
+                <button type="submit" class="btn btn-secondary empty">Empty Cart</button>
+            </form>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="200">Item</th>
+                            <th width="200">Quantity</th>
+                            <th width="200">Total</th>
+                            <th width="100"></th>
+                        <!-- </tr> -->
+                    </thead>
+                    <tbody>
+                    </tbody>
+                        
+                     
+            
+                <p> There are no items in your cart</p>
+            
+        </div>
+    </div>
+
+</main>
+
+<% include ../static/partials/baseScripts.ejs %>
+
+</body>
+</html>
