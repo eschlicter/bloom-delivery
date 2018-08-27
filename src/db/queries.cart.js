@@ -1,7 +1,8 @@
 const Product = require("./models").Product;
-
+const session = require("express-session");
 
 module.exports = {
+
     getCart(id, callback){
         return Product.findById(id)
         .then((product) => {
