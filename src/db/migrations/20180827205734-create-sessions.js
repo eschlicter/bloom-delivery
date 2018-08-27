@@ -11,8 +11,11 @@ module.exports = {
       sid: {
         type: Sequelize.STRING
       },
-      expire: {
+      expires: {
         type: Sequelize.DATE
+      },
+      data:{
+        type: Sequelize.BLOB
       },
       sess: {
         type: Sequelize.JSON

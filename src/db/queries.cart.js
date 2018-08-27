@@ -21,7 +21,6 @@ module.exports = {
             if(err){
                 console.log(err);
             }
-
             if(cart[req.params.id]){
                 cart[req.params.id].qty++
             } else {
