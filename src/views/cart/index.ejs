@@ -16,22 +16,25 @@
             <form style="display:initial" action="/cart/remove" method="post">
                 <button type="submit" class="btn btn-secondary empty">Empty Cart</button>
             </form>
-            
-                <table>
+        <% if (typeof cart !== null) { %>
+            <table>
                     <thead>
                         <tr>
-                            <th width="200">Item</th>
+                            <th width="200">Product</th>
                             <th width="200">Quantity</th>
                             <th width="200">Total</th>
                             <th width="100"></th>
                         <!-- </tr> -->
                     </thead>
                     <tbody>
+                        <td><%= cart.name %></td>
+                        <td><%= cart.qty %></td>
+                        <td><%= cart.price %></td>
                     </tbody>
-                        
-                     
-            
-                <p> There are no items in your cart</p>
+            </table>
+        <% } else { %>
+            <p> There are no items in your cart</p>
+        <% } %>
             
         </div>
     </div>

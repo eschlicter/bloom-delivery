@@ -5,13 +5,13 @@ module.exports = {
     index(req, res, next){
         //Get cart from session
         var cart = req.session.cart;
-        var displayCart = {items: [], total:0};
+        var displayCart = {products: [], total:0};
         var total = 0;
 
         //Get total
         for(var item in cart){
-            displayCart.items.push(cart[item]);
-            total += (cart[item].qty * cart[item].price);
+            displayCart.items.push(cart[product]);
+            total += (cart[product].qty * cart[product].price);
         }
         displayCart.total = total;
         // Render cart view
@@ -25,10 +25,20 @@ module.exports = {
             if(err || cart == null){
                 res.redirect(404, "/");
             } else {
-                res.render("cart", {cart});
+                res.render("cart/index", {cart});
             }
         });
     },
+
+    add(req, res, next){
+        cartQueries.addToCard(req.params.id, (err, cart) => {
+            if(err || cart == null){
+                res.redirect(404, "/");
+            } else {
+                res.render("cart/index", {cart})
+            }
+        })
+    }
     
 
     
