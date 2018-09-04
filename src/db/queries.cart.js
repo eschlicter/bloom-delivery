@@ -1,5 +1,5 @@
 const Product = require("./models").Product;
-const Cart = require("./models").Cart;
+
 const session = require("express-session");
 
 module.exports = {
