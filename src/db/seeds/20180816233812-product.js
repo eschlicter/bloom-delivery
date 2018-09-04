@@ -8,7 +8,7 @@ for(let i =1; i <20; i++){
   products.push({
     title: faker.hacker.noun(),
     description: faker.hacker.phrase(),
-    price: 10,
+    price: faker.random.number(),
     image: faker.image.avatar(),
     createdAt: new Date(),
     updatedAt: new Date

@@ -3,21 +3,7 @@ const cartQueries = require("../db/queries.cart.js");
 
 module.exports = {
     index(req, res, next){
-        //Get cart from session
-        var cart = req.session.cart;
-        var displayCart = {products: [], total:0};
-        var total = 0;
-
-        //Get total
-        for(var item in cart){
-            displayCart.items.push(cart[product]);
-            total += (cart[product].qty * cart[product].price);
-        }
-        displayCart.total = total;
-        // Render cart view
-        res.render('cart/index', {
-            cart: displayCart
-        });
+        res.send("TODO: list cart items");
     },
 
     show(req, res, next){
