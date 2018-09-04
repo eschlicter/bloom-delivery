@@ -11,7 +11,8 @@ module.exports = {
             if(err || cart == null){
                 res.redirect(404, "/");
             } else {
-                res.render("cart/index", {cart});
+                console.log(cart.dataValues.description);
+                res.render("cart", {cart});
             }
         });
     },
@@ -21,7 +22,7 @@ module.exports = {
             if(err || cart == null){
                 res.redirect(404, "/");
             } else {
-                res.render("cart/index", {cart})
+                res.render("cart", {cart})
             }
         })
     }

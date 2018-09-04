@@ -21,15 +21,17 @@
                     <thead>
                         <tr>
                             <th width="200">Product</th>
+                            <th width="200">Description</th>
                             <th width="200">Quantity</th>
                             <th width="200">Total</th>
                             <th width="100"></th>
                         <!-- </tr> -->
                     </thead>
                     <tbody>
-                        <td><%= cart.product %></td>
-                        <td><%= cart.qty %></td>
-                        <td><%= cart.price %></td>
+                        <td><%= cart.dataValues.title %></td>
+                        <td><%= cart.dataValues.description %></td>
+                        <td><%= cart.dataValues.qty %></td>
+                        <td><%= cart.dataValues.price %></td>
                     </tbody>
             </table>
         <% } else { %>
