@@ -21,7 +21,7 @@
     "username": "root",
     "password": null,
     "database": "database_production",
-    "host": "127.0.0.1",
+    "host": "eschlicter-bloom-delivery.herokuapp.com",
     "dialect": "postgres",
     "use_env_variable": "DATABASE_URL"
   }
