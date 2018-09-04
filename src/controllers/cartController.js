@@ -11,6 +11,8 @@ module.exports = {
             if(err || cart == null){
                 res.redirect(404, "/");
             } else {
+                console.log(cart);
+                console.log(cart.Product.dataValue);
                 res.render("cart", {cart});
             }
         });
