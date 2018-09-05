@@ -2,3 +2,4 @@
 .envsendgrid.env
 sendgrid.env
 session.postgres
+.env
