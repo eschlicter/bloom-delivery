@@ -13,9 +13,8 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 var sequelize = new Sequelize(
     "bloom-dev",
     "postgres",
-    "password", {
-        "dialect": "postgres",
-        
+    {
+        "dialect": "postgres"
     });
 
 module.exports = {
