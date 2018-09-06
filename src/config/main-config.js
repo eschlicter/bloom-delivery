@@ -11,11 +11,11 @@ const Sequelize = require('sequelize')
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 var sequelize = new Sequelize(
-    "bloom-dev",
+    "database_production",
     "postgres",
-    {
+    "password", {
         "dialect": "postgres"
-    });
+    },);
 
 module.exports = {
     init(app, express){
