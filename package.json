@@ -18,7 +18,7 @@
     "@sendgrid/mail": "^6.3.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
-    "connect-pg-simple": "^5.0.0",
+    
     "connect-session-sequelize": "^5.2.2",
     "cookie-parser": "^1.4.3",
     "dotenv": "^5.0.0",
@@ -35,6 +35,6 @@
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.38.0",
     "sequelize-cli": "^4.1.1",
-    "square-connect": "^2.20180712.2"
+    
   }
 }

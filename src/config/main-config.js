@@ -34,7 +34,7 @@ module.exports = {
             resave: false,
             saveUninitialized: false,
             cookie: { maxAge: 1.21e+9 }, //set cookie to expire in 14 days
-            // proxy: true
+            proxy: true
         }));
         
         app.use(flash());
