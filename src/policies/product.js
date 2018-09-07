@@ -1,24 +1,24 @@
-const ApplicationPolicy = require("./application");
+// const ApplicationPolicy = require("./application");
 
-module.exports = class ProductPolicy extends ApplicationPolicy {
+// module.exports = class ProductPolicy extends ApplicationPolicy {
 
-  new() {
-    return this._isAdmin();
-  }
+//   new() {
+//     return this._isAdmin();
+//   }
 
-  create() {
-    return this.new();
-  }
+//   create() {
+//     return this.new();
+//   }
 
-  edit() {
-    return this._isAdmin();
-  }
+//   edit() {
+//     return this._isAdmin();
+//   }
 
-  update() {
-    return this.edit();
-  }
+//   update() {
+//     return this.edit();
+//   }
 
-  destroy() {
-    return this.update();
-  }
-}
+//   destroy() {
+//     return this.update();
+//   }
+// }
