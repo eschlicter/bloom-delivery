@@ -1,5 +1,5 @@
 const Product = require("./models").Product;
-const Authorizer = require("../policies/product");
+// const Authorizer = require("../policies/product");
 
 module.exports = {
     getAllProducts(callback){
